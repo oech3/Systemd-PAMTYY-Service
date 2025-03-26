@@ -1,0 +1,12 @@
+#~/.config/systemd/user/labwc.service
+[Unit]
+After=dbus-broker.service
+Wants=dbus-broker.service
+
+[Service]
+Environment=WLR_RENDERER=vulkan
+StandardOutput=journal
+ExecStart=/bin/labwc
+
+[Install]
+WantedBy=default.target
