@@ -1,1 +1,1 @@
-Services to autostart Wayland compositor without breaking dbus session.
+Minimal? services to autostart Wayland compositor with correct dbus session.
