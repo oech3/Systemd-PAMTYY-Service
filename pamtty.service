@@ -1,0 +1,14 @@
+[Unit]
+After=graphical.target systemd-user-sessions.service
+Conflicts=getty@tty1.service
+
+[Service]
+User=a
+WorkingDirectory=~
+ExecStart=/bin/sleep Infinity
+#RemainAfterExit=yes
+PAMName=login
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=graphical.target
